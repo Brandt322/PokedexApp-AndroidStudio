@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res/android"
+    card_view:layout_marginTop="6dp"
+    card_view:layout_marginBottom="6dp"
+    card_view:layout_marginLeft="15dp"
+    card_view:layout_marginRight="15dp"
+    card_view:layout_height="wrap_content"
+    card_view:layout_width="match_parent" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llPokemonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/md_theme_light_onBackground"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPokemonName"
+            android:text="UN NOMBRE DE POKEMON"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/md_theme_light_primaryContainer"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
