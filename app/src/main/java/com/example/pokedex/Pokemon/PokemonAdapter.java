@@ -2,6 +2,7 @@ package com.example.pokedex.Pokemon;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.pokedex.PokemonDetailActivity;
 import com.example.pokedex.R;
 import com.example.pokedex.network.model.Pokemon;
+import com.example.pokedex.utils.Constant;
 
 import java.util.List;
 
@@ -37,7 +40,11 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
         holder.tvPokemonName.setText(pokemonList.get(position).getName());
 
         holder.llPokemonContainer.setOnClickListener(v -> {
-            String url = pokemonList.get(position).getUrl();
+            String pokemonId = pokemonList.get(position).getName();
+
+            Intent intent = new Intent(context, PokemonDetailActivity.class);
+            intent.putExtra(Constant.POKEMON_ID, pokemonId);
+            context.startActivity(intent);
         });
     }
 
